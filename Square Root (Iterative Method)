@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double n, x, root;
+    cout << "Enter number: ";
+    cin >> n;
+
+    x = n;
+
+    while(true) {
+        root = 0.5 * (x + n/x);
+        if(abs(root - x) < 0.0001)
+            break;
+        x = root;
+    }
+
+    cout << "Square Root = " << root;
+    return 0;
+}
