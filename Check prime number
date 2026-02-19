@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, i = 2;
+    bool prime = true;
+
+    cout << "Enter number: ";
+    cin >> n;
+
+    if(n <= 1)
+        prime = false;
+
+    while(i <= n/2) {
+        if(n % i == 0) {
+            prime = false;
+            break;
+        }
+        i++;
+    }
+
+    if(prime)
+        cout << "Prime";
+    else
+        cout << "Not Prime";
+
+    return 0;
+}
