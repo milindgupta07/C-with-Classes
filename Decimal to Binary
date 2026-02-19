@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    string binary = "";
+
+    cout << "Enter decimal number: ";
+    cin >> n;
+
+    while(n > 0) {
+        binary = char((n % 2) + '0') + binary;
+        n /= 2;
+    }
+
+    cout << "Binary = " << binary;
+    return 0;
+}
