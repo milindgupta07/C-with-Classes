@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    string password = "admin";
+    string input;
+    int attempts = 0;
+
+    while(attempts < 3) {
+        cout << "Enter password: ";
+        cin >> input;
+
+        if(input == password) {
+            cout << "Login Successful";
+            return 0;
+        }
+        else {
+            cout << "Wrong Password\n";
+        }
+
+        attempts++;
+    }
+
+    cout << "Account Locked";
+    return 0;
+}
