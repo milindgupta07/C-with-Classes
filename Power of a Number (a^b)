@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b, i = 1;
+    long long result = 1;
+
+    cout << "Enter base and exponent: ";
+    cin >> a >> b;
+
+    while(i <= b) {
+        result *= a;
+        i++;
+    }
+
+    cout << "Result = " << result;
+    return 0;
+}
